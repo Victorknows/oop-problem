@@ -9,7 +9,7 @@ def calculate_score(participants):
         score = participant['chickenwings'] * 5 + participant['hamburgers'] * 3 + participant['hotdogs'] * 2
         scoreboard.append({'name': name, 'score': score})
     
-    scoreboard.sort(key=sort_scoreboard)
+    scoreboard.sort(key=sort_scoreboard, reverse=True)
     
     return scoreboard
 
@@ -18,5 +18,5 @@ participants = [
     {'name': "Big Bob", 'chickenwings': 20, 'hamburgers': 4, 'hotdogs': 11}
 ]
 
-scoreboard = calculate_score(participants)
-print(scoreboard)
+score = calculate_score(participants)
+print(score)
